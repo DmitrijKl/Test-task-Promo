@@ -2,12 +2,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  @media (max-width: 708px) {
+    & {
+      gap: 10px;
+    }
+  }
+  @media (max-width: 500px) {
+    & {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
   .input {
     position: relative;
     display: flex;
     align-items: center;
     background-color: white;
-    width: 50%;
+    width: 400px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
@@ -19,6 +32,14 @@
       transition: transform 0.3s;
       &:hover {
         transform: scale(1.1);
+      }
+    }
+    @media (max-width: 708px) {
+      & {
+        width: 100%;
+      }
+      & input {
+        font-size: 16px;
       }
     }
   }
@@ -43,6 +64,22 @@
       cursor: pointer;
       height: 17px;
       width: 17px;
+    }
+  }
+  .reset {
+    background-color: #f90001;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 14px 22px;
+    border: 1px solid #db0202;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #db0b0b;
+      box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
     }
   }
 }

@@ -1,8 +1,8 @@
 import { createSelector } from "@reduxjs/toolkit";
 
 const todos = (state) => state.todoSlice.todosList;
-const textFilter = (state) => state.filterSlice.text;
-const completedFilter = (state) => state.filterSlice.onlyCompleted;
+export const textFilter = (state) => state.filterSlice.text;
+export const completedFilter = (state) => state.filterSlice.onlyCompleted;
 
 export const selectTodosFiltered = createSelector(
   [todos, textFilter, completedFilter],

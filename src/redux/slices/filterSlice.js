@@ -15,7 +15,11 @@ const filterSlice = createSlice({
     setOnlyCompletedFilter: (state) => {
       state.onlyCompleted = !state.onlyCompleted;
     },
+    resetAllFilters: (state) => {
+      return initialState;
+    },
   },
 });
-export const { setTextFilter, setOnlyCompletedFilter } = filterSlice.actions;
+export const { setTextFilter, setOnlyCompletedFilter, resetAllFilters } =
+  filterSlice.actions;
 export default filterSlice.reducer;

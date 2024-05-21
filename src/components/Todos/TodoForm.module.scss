@@ -6,15 +6,30 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    @media (max-width: 708px) {
+      & {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
     .input {
       position: relative;
       display: flex;
       align-items: center;
       background-color: white;
-      width: 50%;
+      width: 400px;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+      @media (max-width: 708px) {
+        & {
+          width: 100%;
+        }
+        & input {
+          font-size: 16px;
+        }
+      }
       .iconClose {
         margin-right: 5px;
         cursor: pointer;
