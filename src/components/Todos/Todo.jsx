@@ -12,7 +12,7 @@ function Todo({ todo }) {
     <div className={`${styles.root} ${completedTodo}`}>
       <RiTodoFill className={styles.todoIcon} />
       <div className={styles.text}>{todo.text}</div>
-      <div>
+      <div className={styles.Icons}>
         <RiDeleteBin2Line
           onClick={() => dispatch(deleteTodo(todo.id))}
           className={styles.deleteIcon}

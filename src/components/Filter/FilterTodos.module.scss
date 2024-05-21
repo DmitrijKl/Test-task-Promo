@@ -1,0 +1,48 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+    .iconClose {
+      margin-right: 5px;
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: none;
+  }
+  .inputCheckbox {
+    display: flex;
+    align-items: center;
+    label {
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 500;
+      margin-right: 6px;
+    }
+    input {
+      cursor: pointer;
+      height: 17px;
+      width: 17px;
+    }
+  }
+}

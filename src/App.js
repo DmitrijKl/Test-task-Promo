@@ -1,4 +1,5 @@
 import Card from "./UI/Card";
+import FilterTodos from "./components/Filter/FilterTodos";
 import Header from "./components/Header/Header";
 import TodoForm from "./components/Todos/TodoForm";
 import Todolist from "./components/Todos/TodoList";
@@ -8,10 +9,15 @@ function App() {
   return (
     <div>
       <Header />
-      <Card>
-        <TodoForm></TodoForm>
-        <Todolist />
-      </Card>
+      <div className="container">
+        <Card>
+          <FilterTodos />
+        </Card>
+        <Card>
+          <TodoForm></TodoForm>
+          <Todolist />
+        </Card>
+      </div>
     </div>
   );
 }
