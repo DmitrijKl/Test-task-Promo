@@ -1,0 +1,17 @@
+[
+  {
+    "text": "Задача 1",
+    "id": 0,
+    "completed": false
+  },
+  {
+    "text": "Задача 2",
+    "id": 1,
+    "completed": true
+  },
+  {
+    "text": "Задача 3",
+    "id": 2,
+    "completed": false
+  }
+]

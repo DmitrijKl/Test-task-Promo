@@ -1,0 +1,35 @@
+.root {
+  width: 100%;
+  margin-bottom: 60px;
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    input {
+      box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+      width: 50%;
+      font-size: 20px;
+      padding: 10px 10px;
+      border-radius: 8px;
+      border: none;
+    }
+  }
+  .button {
+    box-sizing: border-box;
+    background-color: #f90001;
+    border: 1px solid #db0202;
+    padding: 14px 22px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #db0b0b;
+      box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+    }
+  }
+}
