@@ -1,12 +1,18 @@
 .root {
   width: 100%;
   margin-bottom: 40px;
+  @media (max-width: 500px) {
+    & {
+      margin-bottom: 10px;
+    }
+  }
   form {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    @media (max-width: 708px) {
+    flex-wrap: wrap;
+    @media (max-width: 500px) {
       & {
         flex-direction: column;
         gap: 10px;

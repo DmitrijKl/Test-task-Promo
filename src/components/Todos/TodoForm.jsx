@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./TodoForm.module.scss";
-import { addNewTodo } from "../../redux/slices/todoSlice";
+import { addNewTodo, deleteAllTodo } from "../../redux/slices/todoSlice";
 import { useDispatch } from "react-redux";
 import createNewTodo from "../../utils/createNewTodo";
 import { IoCloseOutline } from "react-icons/io5";
@@ -42,7 +42,16 @@ const TodoForm = () => {
             className={styles.iconClose}
           />
         </div>
-        <button className={styles.button}>Добавить задачу</button>
+        <button
+          onClick={() => dispatch(deleteAllTodo())}
+          type="button"
+          className={styles.button}
+        >
+          Удалить все задачи
+        </button>
+        <button type="submit" className={styles.button}>
+          Добавить задачу
+        </button>
       </form>
       <p className={isInputError ? styles.inputError : ""}>
         Поле заполнено не корректно

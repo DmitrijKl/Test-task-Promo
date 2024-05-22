@@ -17,6 +17,9 @@ export const todoSlice = createSlice({
         return todo.id !== action.payload;
       });
     },
+    deleteAllTodo(state) {
+      state.todosList = [];
+    },
     toggleCompleted(state, action) {
       state.todosList.forEach((todo) => {
         if (todo.id === action.payload) {
@@ -26,5 +29,6 @@ export const todoSlice = createSlice({
     },
   },
 });
-export const { addNewTodo, deleteTodo, toggleCompleted } = todoSlice.actions;
+export const { addNewTodo, deleteTodo, toggleCompleted, deleteAllTodo } =
+  todoSlice.actions;
 export default todoSlice.reducer;
