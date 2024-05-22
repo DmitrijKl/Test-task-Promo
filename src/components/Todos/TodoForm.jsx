@@ -7,7 +7,7 @@ import { IoCloseOutline } from "react-icons/io5";
 
 const TodoForm = () => {
   const [inputTodo, setInputTodo] = useState("");
-  const [isInputError, setIsInputErrot] = useState("");
+  const [isInputError, setIsInputErrot] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -25,13 +25,13 @@ const TodoForm = () => {
     <div className={styles.root}>
       <form onSubmit={(event) => handleSubmitForm(event)}>
         <div
-          onFocus={() => setIsInputErrot("")}
+          onFocus={() => setIsInputErrot(false)}
           className={`${styles.input} ${isInputError ? styles.inputError : ""}`}
         >
           <input
             onChange={(event) => {
               setInputTodo(event.target.value);
-              setIsInputErrot("");
+              setIsInputErrot(false);
             }}
             value={inputTodo}
             type="text"
@@ -44,7 +44,7 @@ const TodoForm = () => {
         </div>
         <button className={styles.button}>Добавить задачу</button>
       </form>
-      <p className={isInputError && styles.inputError}>
+      <p className={isInputError ? styles.inputError : ""}>
         Поле заполнено не корректно
       </p>
     </div>

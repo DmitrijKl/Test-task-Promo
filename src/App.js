@@ -7,7 +7,7 @@ import "./scss/app.scss";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <div className="container">
         <Card>
@@ -18,7 +18,7 @@ function App() {
           <Todolist />
         </Card>
       </div>
-    </div>
+    </>
   );
 }
 
