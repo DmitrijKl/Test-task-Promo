@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import todos from "../../data/todos.json";
 
 const initialState = {
-  todosList: todos,
+  todosList: [],
 };
 
 export const todoSlice = createSlice({
@@ -11,6 +10,9 @@ export const todoSlice = createSlice({
   reducers: {
     addNewTodo(state, action) {
       state.todosList = [action.payload, ...state.todosList];
+    },
+    firstMountLocalStorage(state, action) {
+      state.todosList = action.payload;
     },
     deleteTodo(state, action) {
       state.todosList = state.todosList.filter((todo) => {
@@ -29,6 +31,11 @@ export const todoSlice = createSlice({
     },
   },
 });
-export const { addNewTodo, deleteTodo, toggleCompleted, deleteAllTodo } =
-  todoSlice.actions;
+export const {
+  addNewTodo,
+  deleteTodo,
+  toggleCompleted,
+  deleteAllTodo,
+  firstMountLocalStorage,
+} = todoSlice.actions;
 export default todoSlice.reducer;
