@@ -1,22 +1,39 @@
+.todo {
+  background-color: #fbfef9;
+  box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 15px 0;
+  animation: layot 0.4s;
+
+  span {
+    color: #112d49;
+  }
+  .dateTodo {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 515px) {
+      flex-direction: column;
+    }
+  }
+}
+
 .root {
   overflow: hidden;
-  animation: layot 0.4s;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  margin: 15px 0;
   font-size: 1.5rem;
-  border-radius: 5px;
-  box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
-  color: #112d49;
-  background-color: #fbfef9;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 5px;
 
   .text {
     display: inline-block;
     overflow: auto;
     width: 80%;
     text-align: start;
+    white-space: nowrap;
   }
   .todoIcon {
     font-size: 1.8rem;
@@ -46,6 +63,7 @@
     border-color: gray;
     color: gray;
     text-decoration: line-through;
+    border-bottom: 1px solid #ebebeb;
   }
   &.completedTodo .todoIcon,
   &.completedTodo .checkIcon,

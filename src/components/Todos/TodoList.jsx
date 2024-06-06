@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import Todo from "./Todo";
-import { selectTodosFiltered } from "../../redux/selectors";
+import { selectTodosFiltered, todosSelector } from "../../redux/selectors";
 import { useEffect } from "react";
 import { firstMountLocalStorage } from "../../redux/slices/todoSlice";
 
@@ -9,7 +9,7 @@ let firstMount = true;
 function Todolist() {
   const dispatch = useDispatch();
   const filteredSlice = useSelector(selectTodosFiltered);
-  const tasks = useSelector((state) => state.todoSlice.todosList);
+  const tasks = useSelector(todosSelector);
 
   useEffect(() => {
     if (firstMount) {

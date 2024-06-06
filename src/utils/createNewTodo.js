@@ -5,6 +5,8 @@ const createNewTodo = (inputText) => {
     text: inputText,
     id: uuidv4(),
     completed: false,
+    dateCreateTodo: new Date().toLocaleDateString(),
+    timeCreateTodo: new Date().toLocaleTimeString(),
   };
 };
 export default createNewTodo;

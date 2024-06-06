@@ -1,13 +1,13 @@
 import { createSelector } from "@reduxjs/toolkit";
 
-export const todos = (state) => state.todoSlice.todosList;
+export const todosSelector = (state) => state.todoSlice.todosList;
 export const textFilter = (state) => state.filterSlice.text;
 export const completedFilter = (state) => state.filterSlice.onlyCompleted;
 
 export const selectTodosFiltered = createSelector(
-  [todos, textFilter, completedFilter],
-  (todos, textFilter, completedFilter) => {
-    return todos.filter((todo) => {
+  [todosSelector, textFilter, completedFilter],
+  (todosSelector, textFilter, completedFilter) => {
+    return todosSelector.filter((todo) => {
       const textFiltered = todo.text
         .toLowerCase()
         .includes(textFilter.trim().toLowerCase());
